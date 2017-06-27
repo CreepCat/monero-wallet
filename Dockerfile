@@ -13,4 +13,4 @@ RUN cd monero-wallet && ln -s monero-wallet-cli wallet
 
 WORKDIR /root/monero-wallet
 
-ENTRYPOINT ["./monerod"]
+ENTRYPOINT ["monerod"]
