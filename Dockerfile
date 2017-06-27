@@ -9,6 +9,10 @@ RUN wget https://downloads.getmonero.org/cli/monero-linux-x64-v0.10.3.1.tar.bz2 
 
 RUN cd monero-v0.10.3.1 && ln -s monero-wallet-cli wallet
 
+COPY start.sh /
+
+CMD chmod 777 /start.sh
+
 WORKDIR /monero-v0.10.3.1
 
-ENTRYPOINT ["./monerod"]
+ENTRYPOINT /start.sh
