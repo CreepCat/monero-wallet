@@ -11,6 +11,8 @@ RUN cd monero-v0.10.3.1 && ln -s monero-wallet-cli wallet
 
 COPY start.sh /
 
+CMD chmod +x /start.sh
+
 WORKDIR /monero-v0.10.3.1
 
-ENTRYPOINT /bin/bash
+ENTRYPOINT /start.sh
