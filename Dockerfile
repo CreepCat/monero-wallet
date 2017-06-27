@@ -13,4 +13,4 @@ COPY start.sh /
 
 WORKDIR /monero-v0.10.3.1
 
-ENTRYPOINT ["/start"]
+CMD ["monerod"]
