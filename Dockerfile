@@ -11,4 +11,4 @@ RUN cd monero-v0.10.3.1 && ln -s monero-wallet-cli wallet
 
 WORKDIR /monero-v0.10.3.1
 
-ENTRYPOINT ["./monerod"]
+ENTRYPOINT ["/bin/bash"]
