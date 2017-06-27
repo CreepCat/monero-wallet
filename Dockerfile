@@ -6,9 +6,10 @@ RUN cd / && apt-get update -qq && \
       cd /root/
 
 RUN wget https://downloads.getmonero.org/cli/monero-linux-x64-v0.10.3.1.tar.bz2 && \
-      tar -xvf monero-linux-x64-v0.10.3.1.tar.bz2 && mv monero-v0.10.3.1 monero-wallet
+      tar -xvf monero-linux-x64-v0.10.3.1.tar.bz2 && mv monero-v0.10.3.1 monero-wallet && \
+      rm monero-linux-x64-v0.10.3.1.tar.bz2
 
-RUN cd monero-wallet && ls -n monero-wallet-cli wallet
+RUN cd monero-wallet && ln -s monero-wallet-cli wallet
 
 WORKDIR /root/monero-wallet
 
